@@ -1,0 +1,10 @@
+13.INPUT:
+def cse():
+    print("HI")
+def ece(x=20,y=10):
+    print("Hello",x,y)
+ece(5)
+cse()
+OUTPUT:
+Hello 5 10
+HI
