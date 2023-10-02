@@ -1,0 +1,12 @@
+14.INPUT:
+def cse():
+    print("HI")
+def ece(x=20,y=10):
+    print("Hello",x,y)
+ece(,5)
+cse()
+OUTPUT:
+ File "C:/Users/hp/Downloads/prob4.py", line 5
+    ece(,5)
+        ^
+SyntaxError: invalid syntax
