@@ -1,0 +1,11 @@
+7.INPUT:
+a=int(input())
+for i in range(a):
+    print(" "*(a-i) + "* " * (i+1))
+OUTPUT:
+5
+     * 
+    * * 
+   * * * 
+  * * * * 
+ * * * * * 
