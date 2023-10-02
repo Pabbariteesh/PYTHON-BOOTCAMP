@@ -1,0 +1,12 @@
+16.INPUT:
+def cse():
+    print("HI")
+def ece(x=20,y):
+    print("Hello",x,y)
+ece(6,10)
+cse()
+OUTPUT:
+  def ece(x=20,y):
+            ^
+SyntaxError: non-default argument follows default argument
+
