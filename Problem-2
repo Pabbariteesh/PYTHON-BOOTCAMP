@@ -1,0 +1,9 @@
+2.INPUT:
+a=4
+b=2
+a=a+1
+b=b-2
+c=(a)|(b+3)
+print(c)
+OUTPUT:
+7
