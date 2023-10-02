@@ -1,0 +1,15 @@
+23.INPUT:
+def cse(x):                                     cse(8)=21
+ if(x==1):                                         / \
+ return 1                                 cse(7)=13 + cse(6)=8
+ if(x==2):                                  / \
+ return 1                           cse(6) =8 + cse(5)=5
+ return cse(x-1)+cse(x-2)             / \
+for i in range(1,9):           cse(5)=5+ cse(4)=3
+ print(cse(i),end= " ")             / \
+OUTPUT:                       cse(4)=3 + cse(3)=2
+1 1 2 3 5 8 13 21                 / \
+                            cse(3)=2 + cse(2)=1
+                                / \
+                           cse(2)+ cse(1)
+                                1 + 1
