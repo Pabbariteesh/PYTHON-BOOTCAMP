@@ -1,0 +1,320 @@
+1.INPUT:
+a=4
+b=2
+a=a+1
+b=b-2
+c=(a)^(b+3)
+print(c)
+OUTPUT:
+6
+
+
+2.INPUT:
+a=4
+b=2
+a=a+1
+b=b-2
+c=(a)|(b+3)
+print(c)
+OUTPUT:
+7
+
+
+3.INPUT:
+for i in range(-6,-15,-2):
+       print(i)
+OUTPUT:
+-6
+-8
+-10
+-12
+-14
+
+4.INPUT:
+a=int(input())
+for i in range(a):
+    for j in range(i+1):
+        print("* ",end='')
+    print()
+OUTPUT:
+5
+* 
+* * 
+* * * 
+* * * * 
+* * * * * 
+
+5.INPUT:
+a=int(input())
+for i in range(a):
+    for j in range(a-i):
+        print(" * ",end='')
+    print()
+OUTPUT:
+5
+ *  *  *  *  * 
+ *  *  *  * 
+ *  *  * 
+ *  * 
+ * 
+
+6.INPUT:
+a=int(input())
+for i in range(a):
+    print(" "*(a-i) + "* " * (i+1))
+for i in range(a):
+    print(" "*(i+1) + "* " * (a-i))
+OUTPUT:
+3
+   * 
+  * * 
+ * * * 
+ * * * 
+  * * 
+   * 
+
+
+7.INPUT:
+a=int(input())
+for i in range(a):
+    print(" "*(a-i) + "* " * (i+1))
+OUTPUT:
+5
+     * 
+    * * 
+   * * * 
+  * * * * 
+ * * * * * 
+
+8.INPUT:
+a=int(input())
+for i in range(a):
+    print(" "*(i+1) + "* " * (a-i))
+OUTPUT:
+5
+ * * * * * 
+  * * * * 
+   * * * 
+    * * 
+     * 
+9.INPUT:
+a=int(input())
+for i in range(a):
+    print((str(a-i)+(" "))*(i+1))
+OUTPUT:
+5
+5 
+4 4 
+3 3 3 
+2 2 2 2 
+1 1 1 1 1 
+
+
+10.INPUT:
+a=int(input())
+for i in range(a):
+    print((str(i+1)+(" "))*(i+1))
+OUTPUT:
+5
+1 
+2 2 
+3 3 3 
+4 4 4 4 
+5 5 5 5 5 
+
+
+11.INPUT:
+
+a=int(input())
+b=1
+for i in range(1,a+1):
+    print(b*i)
+    b=(b*10)+1
+OUTPUT:
+5
+1
+22
+333
+4444
+55555
+
+12.INPUT:
+def cse():
+    print("HI")
+def ece(*x):
+    print("Hello",x)
+ece(1,2,3,4,5,)
+cse()
+OUTPUT:
+Hello (1, 2, 3, 4, 5)
+HI
+
+
+13.INPUT:
+def cse():
+    print("HI")
+def ece(x=20,y=10):
+    print("Hello",x,y)
+ece(5)
+cse()
+OUTPUT:
+Hello 5 10
+HI
+
+14.INPUT:
+def cse():
+    print("HI")
+def ece(x=20,y=10):
+    print("Hello",x,y)
+ece(,5)
+cse()
+OUTPUT:
+ File "C:/Users/hp/Downloads/prob4.py", line 5
+    ece(,5)
+        ^
+SyntaxError: invalid syntax
+
+
+15.INPUT:
+def cse():
+    print("HI")
+def ece(x=20,y=10):
+    print("Hello",x,y)
+ece(6,10)
+cse()
+OUTPUT:
+Hello 6 10
+HI
+
+
+16.INPUT:
+def cse():
+    print("HI")
+def ece(x=20,y):
+    print("Hello",x,y)
+ece(6,10)
+cse()
+OUTPUT:
+  def ece(x=20,y):
+            ^
+SyntaxError: non-default argument follows default argument
+
+
+17.INPUT:
+def cse(x):
+    print("Hi")
+    print(x)
+def ece(x):
+    print("hello")
+    cse(x+3)
+    print(x)
+ece(5)
+cse(4)
+print(2)
+OUTPUT:
+hello
+Hi
+8
+5
+Hi
+4
+2
+
+18.INPUT:
+def cse(x):
+    if(x==0):
+        return 0
+    print(x)
+    cse(x-1)
+    print(x)
+cse(4)
+OUTPUT:
+4
+3
+2
+1
+1
+2
+3
+4
+
+
+INPUT:
+def cse(x):
+    if(x==0):
+        return 0
+    print(x)
+    print(cse(x-1))
+    print(x)
+cse(4)
+OUTPUT:
+4
+3
+2
+1
+0
+1
+None
+2
+None
+3
+None
+4
+
+
+INPUT:
+def cse(x):
+    if(x==0):
+        return 0
+    print(x)
+    print(cse(x-1))
+    print(x)
+    return 18
+cse(4)
+OUTPUT:
+4
+3
+2
+1
+0
+1
+18
+2
+18
+3
+18
+4
+
+
+INPUT:
+def cse(x):
+    if (x==0):
+        return 0
+    return x+ cse(x-1)
+print(cse(4))
+OUTPUT:
+10
+
+INPUT:
+def fact(x):
+    if (x==0):
+        return 1
+    return x * fact(x-1)
+print(fact(4))
+OUTPUT:
+24
+INPUT:
+def cse(x):					cse(8)=21
+    if(x==1):					/    \
+        return 1			     cse(7)=13 + cse(6)=8			
+    if(x==2):				     /    \
+        return 1			cse(6) =8 + cse(5)=5				
+    return cse(x-1)+cse(x-2)		/   \
+for i in range(1,9):		      cse(5)=5+ cse(4)=3
+    print(cse(i),end= " ")	      /     \
+OUTPUT:				     cse(4)=3 + cse(3)=2
+1 1 2 3 5 8 13 21		     /    \
+				cse(3)=2  +  cse(2)=1
+				/   \
+ 			     cse(2)+ cse(1)
+				1  +   1
