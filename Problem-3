@@ -1,0 +1,9 @@
+3.INPUT:
+for i in range(-6,-15,-2):
+       print(i)
+OUTPUT:
+-6
+-8
+-10
+-12
+-14
