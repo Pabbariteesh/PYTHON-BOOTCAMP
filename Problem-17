@@ -1,0 +1,19 @@
+17.INPUT:
+def cse(x):
+    print("Hi")
+    print(x)
+def ece(x):
+    print("hello")
+    cse(x+3)
+    print(x)
+ece(5)
+cse(4)
+print(2)
+OUTPUT:
+hello
+Hi
+8
+5
+Hi
+4
+2
